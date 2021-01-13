@@ -43,7 +43,7 @@
 11. Exécuter la commande qui revient directement à votre répertoire personnel
 12. Créer un répertoire nommé `temp` dans votre répertoire personnel
 13. Copier le fichier `/etc/passwd` dans le répertoire `temp`
-14. Copier le répertoire `/etc/ppp` dans le répertoire courant (ignorer toutes les erreurs "permission denied")
+14. Copier le répertoire `/etc/ppp` dans le répertoire courant (ignorer toutes les erreurs "permission denied") (utiliser un autre répertoire pas trop « gros », comme `/etc/ssh`, si `/etc/ppp` n'est pas sur votre système)
 15. Renommer le répertoire `ppp` du répertoire courant en `peers`
 16. Mettre à jour le timestamp du fichier `temp/passwd` à la date et heure courantes
 17. Créer un nouveau fichier vide nommé `test` dans le répertoire `temp`
