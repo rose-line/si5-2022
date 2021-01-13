@@ -7,7 +7,7 @@
 ### Références
 
 - Documents issus de vo propres recherches sur Internet
-- Si vous le souhaitez, le [document compagnon du MOOC « Maîtriser le shell Bash »](www.opimedia.be/DS/languages/Bash/MOOC-Maitriser-le-shell-Bash--Document-compagnon--v2-6-2019.pdf), en français et relativement bien fait
+- Si vous le souhaitez, le [document compagnon du MOOC « Maîtriser le shell Bash »](http://www.opimedia.be/DS/languages/Bash/MOOC-Maitriser-le-shell-Bash--Document-compagnon--v2-6-2019.pdf), en français et relativement bien fait
 
 ### Les commandes à considérer
 
