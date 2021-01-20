@@ -1,34 +1,26 @@
-# TP Linux
-
-## 1. Installation Linux ou VM
-
-## 2. CLI
+# TPs Linux
 
 ### Références
 
 - Documents issus de vo propres recherches sur Internet
 - Si vous le souhaitez, le [document compagnon du MOOC « Maîtriser le shell Bash »](http://www.opimedia.be/DS/languages/Bash/MOOC-Maitriser-le-shell-Bash--Document-compagnon--v2-6-2019.pdf), en français et relativement bien fait
 
-### Les commandes à considérer
-
-`pwd, cd, ls, file, less, head, tail, mkdir, cp, mv, rm, rmdir, touch, echo, set, unset, export, env, alias, history, nl, find, grep, sed`
-
-### Les fonctionnalités du shell à considérer
-
-- « Globbing » de fichier
-- Variables Shell
-- Variables d'environnement (commandes `export` et `env`)
-- Alias de commandes (commande `alias`)
-- Historique de commandes
-- Redirection d'entrées/sorties (STDOUT, STDERR, STDIN, utilisations des caractères `<` et `>` dans les commandes)
-- « Piping » (caractère `|` dans les commandes, bien comprendre différence avec `>`)
-- Sous-commandes (`$(commande a executer)` à l'intérieur d'une autre commande)
-- Expressions régulières
-- Bien comprendre `find` (recherche fichiers) et `grep` (recherche dans fichiers)
-- Commande `sed` pour éditer un fichier en ligne de commande (automatiquement), par exemple pour remplacer une chaîne de caractère par une autre
-- Commandes d'archivage et de compression : `tar`, `gzip`, `gunzip` `bz2`, `xz`
-
 ### 1. Gestion de fichiers
+
+- Commandes : `pwd, cd, ls, file, less, head, tail, mkdir, cp, mv, rm, rmdir, touch, echo, set, unset, export, env, alias, history, nl, find, grep, sed`
+- Notions :
+  - « Globbing » de fichier
+  - Variables Shell
+  - Variables d'environnement (commandes `export` et `env`)
+  - Alias de commandes (commande `alias`)
+  - Historique de commandes
+  - Redirection d'entrées/sorties (STDOUT, STDERR, STDIN, utilisations des caractères `<` et `>` dans les commandes)
+  - « Piping » (caractère `|` dans les commandes, bien comprendre différence avec `>`)
+  - Sous-commandes (`$(commande a executer)` à l'intérieur d'une autre commande)
+  - Expressions régulières
+  - Bien comprendre `find` (recherche fichiers) et `grep` (recherche dans fichiers)
+  - Commande `sed` pour éditer un fichier en ligne de commande (automatiquement), par exemple pour remplacer une chaîne de caractère par une autre
+  - Commandes d'archivage et de compression : `tar`, `gzip`, `gunzip` `bz2`, `xz`
 
 1. Ouvrir un terminal
 2. Afficher le répertoire courant
@@ -50,7 +42,7 @@
 18. Supprimer le fichier `temp/passwd`
 19. Supprimer le répertoire `peers`
 
-### 2. Quelques fonctionnalités du Shell
+### 2. Fonctionnalités du Shell
 
 1. Afficher le contenu de la variable `HOME`
 2. Afficher toutes les variables shell avec leur contenu
@@ -81,3 +73,93 @@
 7. Comparer les tailles des deux fichiers compressés (`.gzip` et `.bz2`) ; lequel des deux algorithmes semble avoir un meilleur taux de compression ?
 8. Supprimer le fichier `etcppp.tar`
 9. Décompresser le fichier `etcppp.tar.gz`
+
+### 4. Obtenir de l'aide
+
+- `man` et ses options (pour les commandes générales et les fichiers de configuration), `help` (pour les commandes shell seulement, comme `cd`), `whatis`, `info`
+- Sur n'importe quelle commande, souvent une option `--help` (parfois `-h`) pour une aide plus brève
+
+### 5. Identifier et résoudre les problèmes liés à une commande
+
+Étapes générales de résolution d'un problème (valable au-delà des problèmes de commandes systèmes) :
+
+- **Réunir des informations** : lire les messages d'erreurs, essayer une autre commande basique sur le même fichier (problème d'existence/d'accès ?)
+- **Déterminer la cause probable** : utiliser `--help` ou `man/info`, internet (notamment, faire une recherche sur le message d'erreur spécifique), un ami/collègue, voire l'admin système (en fournissant les détails)...
+- **S'assurer que toutes les actions sont documentées** : en a-t-on compris suffisamment et a-t-on tout ce qu'il faut pour aller à la fin de la procédure ? Pourra-ton « défaire » chaque étape si ça ne fonctionne pas ?
+- **Effectuer les actions** : s'assurer que chaque action produit le résultat intermédiaire attendu avant de poursuivre ; toute la procédure tombe par terre sinon, et il pourra être difficile de « défaire » si on ne sait pas ce qui a été « fait »
+- **Vérifier que le problème est résolu** : si ce n'est pas le cas, faut-il « défaire » ce qui a été essayé auparavant ? Souvent oui, car ces actions pourraient interférer avec une nouvelle solution potentielle et/ou créer des problèmes futurs
+- **Vérifier, dans la mesure du possible, qu'il n'y a pas d'autres problèmes** : parfois un *fix* d'un problème cause d'autres problèmes d'une ampleur encore plus importante (problème d'accès d'un utilisateur ? => on édite en root un fichier de configuration pour accorder les droits => on ferme par la même les droits d'autres utilisateurs, ou bien on introduit un problème de sécurité...)
+- **Prendre note de la solution** : trouvez un système qui vous permet de documenter les solutions qui ont fonctionné pour un problème donné. Se dire « c'est bon, je m'en souviendrai » *ne fonctionne quasiment jamais* pour un problème au-delà du trivial. Utilisez plutôt un outil numérique qui permettra des recherches aisées, des copier/coller de lignes de commandes, un système de tags, etc.
+
+1. Essayer d'exécuter la commande `ls /var/logs`
+2. La commande précédente échoue. Lire le message d'erreur et expliquer pourquoi
+3. Quelle commande pourrait-on exécuter pour déterminer le nom correct du répertoire de logs ?
+4. Exécuter la commande correcte
+5. Essayer `head -N 7 /etc/passwd`
+6. Marche pas. Quelle commande peut-on exécuter pour connaître la bonne option ?
+7. Exécuter la commande correcte
+8. Essayer `cp /etc/passwd /var`
+9. Boum. Que se passe-t-il ?
+10. Comment ferait-on pour effectivement travailler sur une copie du fichier ?
+
+### 6. Configurer les comptes groupes
+
+(L'importance des comptes utilisateurs et groupes en termes de sécurité ne peut pas être suffisamment soulignée)
+
+- Notions : ajouter/modifier/supprimer des groupes ; ajouter/supprimer un utilisateur à un groupe ; groupe primaire / groupes secondaires d'un utilisateur
+- Typiquement, on va créer un groupe pour chaque service, un groupe pour un projet sur lequel travaillent plusieurs personnes (potentiellement pas du même service), un groupe pour les différents titres (ingénieurs, managers, etc.) ; cela permettra une gestion individuelle des permissions sur chaque groupe
+- Commandes : `id, groups, chgrp, newgrp, grpadd, groupmod, groupdel, usermod, gpasswd`
+- Fichiers : `/etc/group`, `/etc/gshadow`
+
+1. Afficher l'ID de l'utilisateur courant et ses groupes
+2. Afficher les groupes du compte root. Quel est son groupe primaire ? Quels sont ses groupes secondaires ?
+3. Rechercher la ligne concernant le groupe `adm` dans `etc/group` ; explicitez les informations données sur cette ligne
+4. Déterminer le propriétaire et le groupe propriétaire du fichier `/etc/group`
+5. Afficher les informations du compte groupe `games`
+6. Afficher les informations de mot de passe du compte groupe `games`
+7. Exécuter `su -` (différence avec `su` ?)
+8. Créer un nouveau groupe `test`
+9. Afficher les informations du compte groupe `test`
+10. Changer le nom en `grouptest`
+11. Ajouter votre compte utilisateur personnel en tant que second membre du groupe `grouptest` *sans écraser vos autres groupes actuels* (trouvez l'option avant d'exécuter la commande)
+12. Expliquez ce que fait la commande `find / -group grouptest -exec chgrp compta {} \;`
+13. Supprimer le groupe `grouptest`
+14. Répondez à la question suivante de l'un de vos utilisateurs : « Je veux créer des fichiers qui auront pour groupe propriétaire le groupe `projet-x`. Comment je fais pour changer temporairement mon groupe primaire pour que les fichiers soient créés avec le bon groupe ? »
+
+### 7. Configurer un administrateur de groupe
+
+Créez un utilisateur `dummy`. Créez un nouveau groupe `supports` et ajoutez-y l'utilisateur `dummy`. Faites de `dummy` un administrateur du groupe. Confirmez ce nouveau statut en examinant `/etc/gpasswd`. Pour tester, loggez-vous en tant que `dummy` et ajoutez l'utilisateur `bin` au groupe `supports` (vous devriez aors pouvoir le faire sans `sudo`) puis affichez les groupes de `bin`.
+
+### 8. Configurer les comptes utilisateurs
+
+- Notions : ajouter/modifier/supprimer des utilisateurs, permissions utilisateurs
+- Commandes : `useradd, passwd`
+- Fichiers : `/etc/passwd, /etc/shadow, /etc/group, /etc/gshadow`
+
+
+1. Afficher les informations du compte `bin` (y compris le shell et le répertoire utilisateur)
+2. Afficher les informations de mot de passe de votre compte (y compris le mot de passe haché)
+3. Créer un utilisateur `nadine` en spécifiant explicitement la création du répertoire utilisateur (sinon ce répertoire n'est pas forcément créé)
+4. Appliquer un mot de passe fort pour `nadine` : `couscousavecdesmerguezdanstaface`
+5. Afficher les valeurs par défaut utilisées lorsqu'un nouveau compte est créé
+6. Afficher le fichier qui contient les informations de temps d'expiration par défaut pour les mots de passe
+7. Afficher le fichier qui contient les informations sur le shell par défaut
+8. Supprimer le compte `nadine` ainsi que son compte utilisateur (en une seule commande)
+
+### 9. Sécuriser les comptes utilisateurs
+
+Créer un compte utilisateur `francis` avec les contraintes suivantes :
+
+- Mot de passe fort généré aléatoirement (https://passwordsgenerator.net)
+- Groupe secondaire : `games`
+- Répertoire utilisateur : `/home/francis`
+- Doit être obligé de changer son mot de passe tous les 60 jours
+- Après un changement de mot de passe, doit attendre au moins 2 jours avant de changer à nouveau
+- Doit recevoir un avertissement à chaque login dans les 10 jours qui précèdent l'expiration du mot de passe
+- Si le mot de passe n'est toujours pas changé, doit avoir une période de « grâce » de 60 jours après expiration pendant laquelle on lui permettra de se loguer s'il change son mot de passe immédiatement à la connexion
+- Le compte doit expirer le 01/01/2024
+- Doit avoir (comme tous les utilisateurs) un mot de passe de minimum 12 caractères
+
+### 10. Configurer `sudo`
+
+Autoriser l'utilisateur `francis` à utiliser la commande `apt-get`. Vérifier que `francis` peut alors installer un package en *simulant* l'installation d'un package quelconque.
