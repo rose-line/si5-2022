@@ -53,7 +53,7 @@
 7. Afficher toutes les variables d'environnement
 8. Créer un alias dans le shell courant pour la commande `ls` de telle sorte que ça lance la commande `ls -a`
 9. Afficher tous les alias du shell courant
-10. Supprimer l'alias `fgrep` du shell courant
+10. Supprimer l'alias défini en 8 du shell courant
 11. Afficher une liste des commandes précédemment exécutées
 12. Re-exécuter la dernière commande `ls` de l'historique
 13. Changer le nombre maximum de commandes stockées dans l'historique du shell courant (2000)
