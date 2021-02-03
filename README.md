@@ -163,3 +163,7 @@ Créer un compte utilisateur `francis` avec les contraintes suivantes :
 ### 10. Configurer `sudo`
 
 Autoriser l'utilisateur `francis` à utiliser la commande `apt-get`. Vérifier que `francis` peut alors installer un package en *simulant* l'installation d'un package quelconque.
+
+### 11. Concours de craquage
+
+Téléchargez le fichier `hashed`. Utilisez l'outil de votre choix **en ligne de commande** pour casser les mots de passe hashés s'y trouvant. Combien de mots de passe parvenez-vous à faire sauter ?
