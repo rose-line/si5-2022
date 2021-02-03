@@ -2,7 +2,7 @@
 
 ### Références
 
-- Documents issus de vo propres recherches sur Internet
+- Documents issus de vos propres recherches sur Internet
 - Si vous le souhaitez, le [document compagnon du MOOC « Maîtriser le shell Bash »](http://www.opimedia.be/DS/languages/Bash/MOOC-Maitriser-le-shell-Bash--Document-compagnon--v2-6-2019.pdf), en français et relativement bien fait
 
 ### 1. Gestion de fichiers
@@ -128,7 +128,7 @@
 
 ### 7. Configurer un administrateur de groupe
 
-Créez un utilisateur `dummy`. Créez un nouveau groupe `supports` et ajoutez-y l'utilisateur `dummy`. Faites de `dummy` un administrateur du groupe. Confirmez ce nouveau statut en examinant `/etc/gpasswd`. Pour tester, loggez-vous en tant que `dummy` et ajoutez l'utilisateur `bin` au groupe `supports` (vous devriez aors pouvoir le faire sans `sudo`) puis affichez les groupes de `bin`.
+Créez un utilisateur `dummy`. Créez un nouveau groupe `supports` et ajoutez-y l'utilisateur `dummy`. Faites de `dummy` un administrateur du groupe. Confirmez ce nouveau statut en examinant `/etc/gshadow`. Pour tester, loggez-vous en tant que `dummy` et ajoutez l'utilisateur `bin` au groupe `supports` (vous devriez alors pouvoir le faire sans `sudo`) puis affichez les groupes de `bin`.
 
 ### 8. Configurer les comptes utilisateurs
 
