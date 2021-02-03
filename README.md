@@ -144,7 +144,7 @@ Créez un utilisateur `dummy`. Créez un nouveau groupe `supports` et ajoutez-y 
 5. Afficher les valeurs par défaut utilisées lorsqu'un nouveau compte est créé
 6. Afficher le fichier qui contient les informations de temps d'expiration par défaut pour les mots de passe
 7. Afficher le fichier qui contient les informations sur le shell par défaut
-8. Supprimer le compte `nadine` ainsi que son compte utilisateur (en une seule commande)
+8. Supprimer le compte `nadine` ainsi que son répertoire utilisateur (en une seule commande)
 
 ### 9. Sécuriser les comptes utilisateurs
 
