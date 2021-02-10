@@ -2,7 +2,7 @@
 
 ## 0. Introduction
 
-Lire le petit [cours sur le scripting](scripting_bash.md).
+Lire le petit [cours sur le scripting](bash_scripting.md).
 
 ## 1. Menu pour utilisateur lamda
 
