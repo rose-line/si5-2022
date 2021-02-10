@@ -170,3 +170,23 @@ Téléchargez le fichier `hashed`.
 
 1. Combien de mots de passe hachés contient ce fichier (donner la commande) ?
 2. Utilisez l'outil de votre choix **en ligne de commande** pour casser les mots de passe hashés s'y trouvant. Vous pouvez utilisez la force brute et/ou un dictionnaire comme celui fourni (`dico`). Combien de mots de passe parvenez-vous à faire sauter ?
+
+### 12. Permissions de fichiers
+
+On considérera que vous vous connectez avec le nom d'utilisateur `etudiant` (sans privilèges particuliers) pour la suite. Il n'est néanmoins pas nécessaire de créer un compte appelé spécifiquement `etudiant`.
+
+1. Afficher les permissions du fichier `/etc/shadow`
+2. Examiner la sortie de la commande. Quel utilisateur est propriétaire du fichier ? Quel groupe ?
+3. Essayer d'exécuter la commande `more /etc/shadow` et expliquer pourquoi cette commande échoue
+4. Ouvrir un shell en `root`
+5. Ajouter votre compte utilisateur `etudiant` (celui sans privilège particulier) au groupe `shadow`
+6. Se déloguer du système (peut être nécessaire pour prendre en compte le changement précédent)
+7. Se loguer en tant qu'utilisateur `etudiant`
+8. Afficher les groupes de l'utilisateur
+9. Vérifier que la commande `more /etc/shadow` fonctionne dorénavant et affiche le contenu du fichier
+10. Copier le fichier dans le répertoire `home` de `etudiant`
+11. En utilisant la *notation octale*, changer les permissions de la copie du fichier `shadow` en `r--------`
+12. En utilisant la *notation symbolique*, changer de nouveau les permissions pour autoriser la lecture aux membres du groupe propriétaire
+13. En utilisant la notation octale, essayer de modifier les permissions du fichier `/etc/shadow` en `r--------`. Expliquer pourquoi la commande échoue.
+14. Changer la valeur du masque du shell courant afin que tout nouveau répertoire ait les permissions par défaut suivante : `rwxr-x---`
+15. Quelles permissions sont alors données aux nouveaux *fichiers* dans ce shell ?
