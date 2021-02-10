@@ -166,7 +166,7 @@ Autoriser l'utilisateur `francis` à utiliser la commande `apt-get`. Vérifier q
 
 ### 11. Concours de craquage
 
-Téléchargez le fichier `hashed`.
+Téléchargez le fichier `passwd_hashed`.
 
 1. Combien de mots de passe hachés contient ce fichier (donner la commande) ?
-2. Utilisez l'outil de votre choix **en ligne de commande** pour casser les mots de passe hashés s'y trouvant. Combien de mots de passe parvenez-vous à faire sauter ?
+2. Utilisez l'outil de votre choix **en ligne de commande** pour casser les mots de passe hashés s'y trouvant. Vous pouvez utilisez la force brute et/ou un dictionnaire comme celui fourni (`dico`). Combien de mots de passe parvenez-vous à faire sauter ?
