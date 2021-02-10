@@ -1,5 +1,9 @@
 # TP Scripting BASH
 
+## 0. Introduction
+
+Lire le petit [cours sur le scripting](scripting_bash.md).
+
 ## 1. Menu pour utilisateur lamda
 
 Il s'agit de créer un script permettant à un utilisateur non familiarisé d'utiliser des commandes shell. Un tel script va permettre à l'utilisateur d'exécuter des commandes sans vraiment les connaître. L'utilisateur se voit proposé un menu.
