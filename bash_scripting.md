@@ -185,7 +185,7 @@ Pareil qu'une suite de `if/elif`, mais plus lisible :
 ```bash
 nom="patrice"
 case $nom in
-  patrice) echo "C'est pattrice";;
+  patrice) echo "C'est Patrice";;
   papa) echo "C'est papa";;
   *) echo "Personne inconnue"
 esac
