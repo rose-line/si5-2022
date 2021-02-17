@@ -4,7 +4,7 @@
 
 Lire le petit [cours sur le scripting](bash_scripting.md).
 
-## 1. Menu pour utilisateur lamda
+## 1. Menu pour utilisateur lambda
 
 Il s'agit de créer un script permettant à un utilisateur non familiarisé d'utiliser des commandes shell. Un tel script va permettre à l'utilisateur d'exécuter des commandes sans vraiment les connaître. L'utilisateur se voit proposé un menu.
 
