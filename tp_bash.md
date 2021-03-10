@@ -53,9 +53,12 @@ Exemple pour l'utilisateur francis :
 - répertoire de sauvegarde (propriétaire : francis, permissions : `rwx------`) : `/var/sauvegardes/francis`
 - fichier de sauvegarde (propriétaire : francis, permissions : `rw-------`) : `/var/sauvegardes/francis/20210630.tar` pour une sauvegarde datant du 30 juin 2021, contenant l'ensemble des fichiers (y compris sous-répertoires) du répertoire `/home/francis` à cette date
 
-Usage du script : `sauvegardeusers [OPTION]`
-Sauvegarde toutes les données de chaque répertoire utilisateur.
-Option :
-`-d`    si spécifiée, supprimera tous les fichiers tar éventuellement présents dans chaque répertoire avant la nouvelle sauvegarde 
+> Usage du script : `sauvegardeusers [OPTION]`
+> 
+> Sauvegarde toutes les données de chaque répertoire utilisateur.
+> 
+> Option :
+> 
+> `-d`    si spécifiée, supprimera tous les fichiers tar éventuellement présents dans chaque répertoire avant la nouvelle sauvegarde 
 
 Modifiez ensuite la crontab pour lancer cette commande (sans option) toutes les semaines.
